@@ -1,0 +1,36 @@
+@media screen and (min-width: 992px) {
+    .container{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row ;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    .resultado{
+        gap: 21px;
+        width: 271px;
+        height: 418px;
+        padding: 30px;
+    }
+    .sumario{
+        width: 271px;
+        height: 418px;
+        gap: 29px;
+        padding: 29px;
+        margin: 0px;
+        border-bottom-right-radius: 30px;
+        border-top-right-radius: 30px;
+        box-shadow: 6px 13px 25px -3px hsl(240, 6%, 71%);
+
+       
+    }   
+    .circulo_resultado{
+        margin: 36px;
+    }
+   
+   
+
+}

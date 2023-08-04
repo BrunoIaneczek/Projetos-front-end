@@ -1,0 +1,19 @@
+body{
+    background-color: darkslategrey;
+    font: 15pt Verdana;
+}
+header{
+    text-align: center;
+    font-family: 'Gill Sans';
+}
+section{
+    background-color: darkturquoise;
+    border-radius: 5px;
+    padding: 5px;
+    width: 600px;
+    margin: auto;
+}
+input{
+    border-radius: 5px;
+}
+

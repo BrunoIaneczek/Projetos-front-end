@@ -1,0 +1,19 @@
+body {
+    background-image: url(fundo.jpg);
+    background-size: 100%;
+    font: 15pt Arial;
+    padding: 2px;
+}
+
+header{
+    color: rgba(253, 253, 253, 0.541);
+    text-align: center;
+}
+
+section{
+    background-color: rgba(255, 255, 255, 0.336);
+    border-radius: 5px;
+    padding: 10px;
+    margin: auto;
+    width: 700px;
+}

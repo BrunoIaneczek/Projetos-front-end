@@ -7,23 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-     <div class="corpo">
-        <div class="semaforo">     
-            <div id="vermelho"></div>
-            <div id="amarelo"></div>
-            <div id="verde"></div>
-        </div>
-        <div class="botoes">
-            <input type="button"  id="vermelho-ligado"   value="vermelho" >
-            
-            <input type="button" id="amarelo-ligado"   value="amarelo" >
-            
-            <input type="button"  id="verde-ligado" value="verde" ></td>
-            
-            <input type="button"  id="automatico-funcao"  value="automático" >
-        </div>    
-     </div>
-     
+     <main>
+        <div class="corpo">
+            <img src="img/desligado.png" alt="semaforo" id="semaforo">
+            <div id="caixa-botoes">
+                <input type="button" class="botoes" id="red"   value="vermelho" >
+                
+                <input type="button" class="botoes" id="yellow"   value="amarelo" >
+                
+                <input type="button" class="botoes" id="green" value="verde" ></td>
+                
+                <!-- <input type="button"  id="auto"  value="automático" > -->
+            </div>    
+         </div>
+     </main>
 </body>
 <script src="codigo.js"></script>
 </html>

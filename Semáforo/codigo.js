@@ -1,14 +1,29 @@
-const botoes = document.getElementById('botoes')
+//Definindo variáveis
+var semaforo = document.getElementById('semaforo')
+var redLigth = document.getElementById('red')
+var yellowLigth = document.getElementById('yellow')
+var greenLigth = document.getElementById('green')
+var automatico = document.getElementById('auto')
+var lightIndex = 0
+let interValId = null
 
 
-const acenderluz = (event) => {
-    acender[event.target.id]();
+
+//Cosntruindo funções
+const redOn = ()=>{
+    semaforo.src = 'img/vermelho.png' 
 }
 
-const acender = {
-    'vermelho-ligado': ()=> document.getElementById('vermelho').style.backgroundColor = 'red'
-    
-
+const yellowOn = ()=>{
+    semaforo.src = 'img/amarelo.png'
 }
 
-botoes.addEventListener('click',acenderluz)
+const greenOn = ()=>{
+    semaforo.src = 'img/verde.png'
+}
+
+//Ativando funções por eventos
+redLigth.addEventListener('click',redOn)
+yellowLigth.addEventListener('click',yellowOn)
+greenLigth.addEventListener('click',greenOn)
+

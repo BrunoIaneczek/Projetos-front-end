@@ -1,44 +1,70 @@
+//Definindo botoes
+const btn_reset = document.querySelector('#botao-reset')
+const btn_apaga = document.getElementById('botao-apaga')
+const btn_igual = document.getElementById('botao-igual')
+const entrada   = document.getElementById('resultado')
 
 
-
-//função que inseri número na tela e operaçã desejada
-function armazena(num){
-    numero = document.getElementById('resultado').innerHTML;
-    document.getElementById('resultado').innerHTML = numero + num;
+//Função que inseri número na tela e operaçã desejada
+const armazena=(num)=>{
+    numero = entrada.innerHTML;
+    entrada.innerHTML = numero + num;
 }
 
-//função que apaga ultimo número digitado
-function apaga(){
-    var resultado = document.getElementById('resultado').innerHTML;
-    document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1)
-    console.log(resultado)
+//Função que apaga ultimo número digitado
+const apaga=()=>{
+    let resultado =entrada.innerHTML;
+   entrada.innerHTML = resultado.substring(0, resultado.length -1)
+    
 }
 
-//função que limpa a tela
-function limpa(){
-    document.getElementById('resultado').innerHTML = ''
+//Função que limpa a tela
+const limpa=()=>{
+   entrada.innerHTML = ''
 }
 
-const soma=()=>{
-    const resultado = document.getElementById('resultado').innerHTML;
-    const separados = resultado.split('+')
-    const valores = separados.map(Number)
-    let resp = valores[0] + valores[1]
-    if(resultado){
-        document.getElementById('resultado').innerHTML = resp
-    } 
+//Função que formata numeros de entrada
+const formataEntrada = (entrada,simb)=>{
+    let resultadoString = entrada.join('')
+    let valores = resultadoString.split(simb)
+    return valores
 }
 
-const sub=()=>{
-    const resultado = document.getElementById('resultado').innerHTML;
-    const separados = resultado.split('-')
-    const valores = separados.map(Number)
-    let resp = valores[0] - valores[1]
-    if(resultado){
-        document.getElementById('resultado').innerHTML = resp
-    } 
+//Função que retorna o resultado da operação
+const resultado=()=>{
+    const resultado = [...document.getElementById('resultado').innerHTML];
+    resultado.map((e)=>{
+        if(e =='+'){
+            const valores = formataEntrada(resultado,'+')
+            let resp = Number(valores[0])+Number(valores[1])
+            if(resultado){
+                entrada.innerHTML = resp
+            }     
+        }else if(e == '-'){
+            const valores = formataEntrada(resultado,'-')
+            let resp = Number(valores[0])-Number(valores[1])
+            if(resultado){
+                entrada.innerHTML = resp
+            }  
+        }else if(e == '*'){
+            const valores = formataEntrada(resultado,'*')
+            let resp = Number(valores[0])*Number(valores[1])
+            if(resultado){
+                entrada.innerHTML = resp
+            }  
+        }else if(e == '/'){
+            const valores = formataEntrada(resultado,'/')
+            let resp = Number(valores[0])/Number(valores[1])
+            if(resultado){
+                entrada.innerHTML = resp
+            }  
+        }
+    })
 }
 
+btn_reset.addEventListener('click',limpa)
+btn_apaga.addEventListener('click',apaga)
+btn_igual.addEventListener('click',resultado)
 
 
 
